@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Fridge Rescue
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Reduce household food waste with intelligent food tracking and expiry predictions.**
 
-Currently, two official plugins are available:
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Fridge Rescue is a smart household food management application designed to help people reduce food waste.
 
-## React Compiler
+It helps users track groceries, estimate expiry dates, identify food that should be consumed first, and discover recipes using ingredients that are approaching their expiry dates.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## The Problem
 
-## Expanding the ESLint configuration
+Households frequently waste food because they forget what they have purchased, where it is stored, and when it should be consumed.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Fridge Rescue aims to address this problem through a simple food inventory and waste-management solution.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Planned Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Receipt Scanning:** Extract grocery items from shopping receipts.
+- **Fridge Recognition:** Identify visible food items using images.
+- **Expiry Predictions:** Estimate shelf life based on food type and storage conditions.
+- **Smart Dashboard:** Highlight items approaching their estimated expiry dates.
+- **Recipe Suggestions:** Recommend recipes using ingredients that should be consumed first.
+- **Waste Tracking:** Record food items used or discarded.
+- **Weekly Statistics:** Monitor household food waste and items saved.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Technology Stack
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+- Frontend: React, Vite, TypeScript
+- Styling: Tailwind CSS
+- Backend and Database: Supabase
+- Shelf-Life Data: USDA FoodKeeper
+- Testing: Vitest, React Testing Library, Playwright
+- Version Control: Git and GitHub
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Architecture
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+See [architecture.md](./architecture.md) for the system architecture, database design, API structure, and development roadmap.
+
+## Project Status
+
+Currently in the planning and foundation stage. Features will be implemented and tested progressively.
+
+## Hackathon
+
+Built for **Arbiter Hacks V1 – Theme Track: Rethinking Waste**.
+
+## Our Goal
+
+Help households make better use of the food they purchase and reduce avoidable food waste.
